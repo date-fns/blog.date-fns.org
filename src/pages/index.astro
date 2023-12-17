@@ -23,9 +23,13 @@ if (!first) throw new Error("No posts found");
   <body>
     <Header />
 
-    <main class="w-full max-w-screen-lg m-auto px-10 py-20">
+    <main
+      class="w-full max-w-screen-lg m-auto px-2 pt-5 pb-10 sm:px-10 sm:py-20"
+    >
       <section>
-        <ul class="flex flex-col items-center space-y-10 text-monsoon-900">
+        <ul
+          class="flex flex-col items-center space-y-8 sm:space-y-10 text-monsoon-900"
+        >
           <li>
             <a href={`/${first.slug.slice(11)}/`}>
               <Pattern title={first.data.title} date={first.data.pubDate} />
@@ -34,12 +38,12 @@ if (!first) throw new Error("No posts found");
 
           {
             posts.map((post) => (
-              <li class="w-full max-w-screen-sm border-b border-monsoon-100 pb-10 last:border-none last:pb-0">
+              <li class="w-full max-w-screen-sm border-b border-monsoon-100 pb-8 sm:pb-10 last:border-none last:pb-0">
                 <a
                   href={`/${post.slug.slice(11)}/`}
                   class="space-y-2 text-monsoon-800"
                 >
-                  <h3 class="text-3xl font-bold leading-tight text-monsoon-950">
+                  <h3 class="text-2xl sm:text-3xl font-bold leading-tight text-monsoon-950">
                     {post.data.title}
                   </h3>
 

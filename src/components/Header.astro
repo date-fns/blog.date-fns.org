@@ -8,8 +8,10 @@ const { mode } = Astro.props;
 
 <header
   class:list={[
-    "h-10",
-    mode === "post" ? "" : "bg-[url('/topbar.png')] bg-cover",
+    "w-full",
+    mode === "post"
+      ? "absolute top-0 left-0 z-10"
+      : "bg-[url('/topbar.png')] bg-cover",
   ]}
 >
   <nav
@@ -21,13 +23,16 @@ const { mode } = Astro.props;
     <h2>
       <a href="/" class="flex items-center space-x-2 text-lg">
         <img src="/logo.svg" alt="date-fns logo" class="w-6" />
-        <span>date-fns <span class="text-monsoon-300">blog</span></span></a
+        <span class="inline-flex space-x-1"
+          ><span class="hidden sm:inline">date-fns</span><span
+            class="text-monsoon-300">blog</span
+          ></span
+        ></a
       >
     </h2>
 
     <div class="flex space-x-3 justify-end text-monsoon-300">
-      <a href="https://date-fns.org">Homepage</a>
-      <a href="https://date-fns.org/docs/Getting-Started">Docs</a>
+      <a href="https://date-fns.org">Docs</a>
       <a href="https://github.com/date-fns/date-fns">GitHub</a>
       <a href="https://twitter.com/date_fns">Twitter</a>
     </div>

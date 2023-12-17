@@ -21,7 +21,7 @@ const { title, description, pubDate } = Astro.props;
       <article>
         <Pattern title={title} date={pubDate} mode="post" />
 
-        <div class="prose prose-lg m-auto py-20">
+        <div class="prose sm:prose-lg m-auto px-2 py-5 sm:px-10 sm:py-20">
           <slot />
         </div>
       </article>
