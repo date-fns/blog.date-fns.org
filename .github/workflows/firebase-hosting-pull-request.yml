@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           cache: "npm"
+          node-version: 20
       - run: npm install
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
