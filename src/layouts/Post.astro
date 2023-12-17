@@ -14,14 +14,16 @@ const { title, description, pubDate } = Astro.props;
   <head>
     <BaseHead title={title} description={description} />
   </head>
-  <body>
+  <body class="dark:bg-diesel-950">
     <Header mode="post" />
 
     <main>
       <article>
         <Pattern title={title} date={pubDate} mode="post" />
 
-        <div class="prose sm:prose-lg m-auto px-2 py-5 sm:px-10 sm:py-20">
+        <div
+          class="prose prose-pink dark:prose-invert sm:prose-lg m-auto px-2 py-5 sm:px-10 sm:py-20"
+        >
           <slot />
         </div>
       </article>
