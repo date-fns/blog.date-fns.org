@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://blog.date-fns.org",
   integrations: [mdx(), sitemap(), tailwind()],
   redirects: {
     "/post/ecmascript-modules-in-date-fns-v2-i1v007ou81rm": "/v2-esm",
