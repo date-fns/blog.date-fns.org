@@ -6,7 +6,7 @@ interface Props {
 const { prefix } = Astro.props;
 ---
 
-<a class="flex space-x-2 items-center" href="https://twitter.com/kossnocorp">
+<div class="flex space-x-2 items-center">
   <span>{prefix}</span>
   <img
     src="/sasha.jpeg"
@@ -14,4 +14,4 @@ const { prefix } = Astro.props;
     class="w-7 h-7 rounded-full"
   />
   <span class="font-medium">Sasha Koss</span>
-</a>
+</div>
