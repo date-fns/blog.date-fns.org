@@ -11,7 +11,7 @@ import Author from "../components/Author.astro";
 const posts = (await getCollection("blog")).sort(
   (a, b) => +b.data.pubDate - +a.data.pubDate
 );
-const first = posts.shift();
+const first = posts[0];
 if (!first) throw new Error("No posts found");
 ---
 
@@ -37,7 +37,7 @@ if (!first) throw new Error("No posts found");
           </li>
 
           {
-            posts.map((post) => (
+            posts.slice(1).map((post) => (
               <li class="w-full max-w-screen-sm border-b border-monsoon-100 pb-8 sm:pb-10 last:border-none last:pb-0 dark:border-monsoon-950">
                 <a href={`/${post.slug.slice(11)}/`} class="space-y-2">
                   <h3 class="text-2xl sm:text-3xl font-bold leading-tight text-monsoon-950 dark:text-monsoon-300">
