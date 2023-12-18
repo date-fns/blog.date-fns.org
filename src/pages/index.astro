@@ -30,7 +30,7 @@ if (!first) throw new Error("No posts found");
         <ul
           class="flex flex-col items-center space-y-8 sm:space-y-10 text-monsoon-900"
         >
-          <li>
+          <li class="w-full">
             <a href={`/${first.slug.slice(11)}/`}>
               <Pattern title={first.data.title} date={first.data.pubDate} />
             </a>
